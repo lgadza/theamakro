@@ -13,11 +13,11 @@ const NavigationBar = () => {
   return (
     <Navbar>
       <SearchBar />
-      <Container className="nav-container">
+      <Container className="nav-container text-center px-0">
         <Row>
           <Navbar.Toggle aria-controls="basic-navbar-nav" />
           <Nav>
-            <ul className="d-flex align-items-center my-0 py-2 justify-content-between w-100">
+            <ul className="d-flex align-items-center my-0 py-2 justify-content-between px-4">
               <li className="d-flex align-items-center justify-content-center flex-column">
                 <Nav.Link>
                   <FontAwesomeIcon
@@ -79,7 +79,7 @@ const SearchBar = () => {
         <Form.Control
           type="search"
           placeholder="Search"
-          className="me-2"
+          className="mx-0"
           aria-label="Search"
         />
       </Form>
