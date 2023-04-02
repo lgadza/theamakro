@@ -10,7 +10,9 @@ body {
   background-color: rgb(32, 44, 51);
   min-height: 100vh;
 }
-
+.text-red {
+  color: rgb(243, 100, 100);
+}
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
     animation: App-logo-spin infinite 20s linear;
