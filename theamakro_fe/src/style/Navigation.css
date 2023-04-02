@@ -1,0 +1,23 @@
+.nav ul li {
+  list-style: none;
+}
+.nav ul {
+  padding: 0 20px;
+}
+div .nav {
+  padding: 0;
+}
+div .nav-container.container {
+  background-color: rgb(32, 44, 51);
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+div .nav-container.container small {
+  color: white;
+}
+nav.navbar .container form input {
+  background-color: rgb(44, 63, 72);
+  color: white;
+}
