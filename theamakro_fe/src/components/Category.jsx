@@ -27,7 +27,7 @@ const Category = () => {
       {categoryWomen && <WomanCategory />}
 
       {category && (
-        <Container className="px-0">
+        <Container className="px-0 category">
           <hr className="my-0 py-0 bg-white mt-3" />
           <div
             role="button"

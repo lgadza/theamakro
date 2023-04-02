@@ -1,4 +1,4 @@
-import { Container, Form, Nav, Navbar, Row } from "react-bootstrap";
+import { Container, Nav, Navbar, Row } from "react-bootstrap";
 import "font-awesome/css/font-awesome.min.css";
 import { Link } from "react-router-dom";
 import {
@@ -13,14 +13,16 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 const NavigationBar = () => {
   return (
     <Navbar>
-      <SearchBar />
-      <Container className="nav-container text-center px-0">
-        <Row>
+      <Container className="nav-container text-center mx-0 d-flex align-items-center justify-content-center px-0">
+        <Row className="w-100">
           <Navbar.Toggle aria-controls="basic-navbar-nav" />
-          <Nav>
-            <ul className="d-flex align-items-center my-0 py-2 justify-content-between px-4">
+          <Nav className="p-0">
+            <ul className="d-flex w-100 align-items-center my-0 py-2 justify-content-between px-4">
               <li className="d-flex align-items-center justify-content-center flex-column">
-                <Link to="/home">
+                <Link
+                  to="/home"
+                  className="d-flex align-items-center justify-content-center flex-column"
+                >
                   <FontAwesomeIcon
                     icon={faHouse}
                     style={{ color: "white", fontSize: "20px" }}
@@ -29,7 +31,10 @@ const NavigationBar = () => {
                 </Link>
               </li>
               <li className="d-flex align-items-center justify-content-center flex-column">
-                <Link>
+                <Link
+                  to="category"
+                  className="d-flex align-items-center justify-content-center flex-column"
+                >
                   <FontAwesomeIcon
                     icon={faSearch}
                     style={{ color: "white", fontSize: "20px" }}
@@ -38,7 +43,7 @@ const NavigationBar = () => {
                 </Link>
               </li>
               <li className="d-flex align-items-center justify-content-center flex-column">
-                <Link>
+                <Link className="d-flex align-items-center justify-content-center flex-column">
                   <FontAwesomeIcon
                     icon={faEnvelope}
                     style={{ color: "white", fontSize: "20px" }}
@@ -47,7 +52,7 @@ const NavigationBar = () => {
                 </Link>
               </li>
               <li className="d-flex align-items-center justify-content-center flex-column">
-                <Link>
+                <Link className="d-flex align-items-center justify-content-center flex-column">
                   <FontAwesomeIcon
                     icon={faCirclePlus}
                     style={{ color: "white", fontSize: "20px" }}
@@ -56,7 +61,7 @@ const NavigationBar = () => {
                 </Link>
               </li>
               <li className="d-flex align-items-center justify-content-center flex-column">
-                <Link>
+                <Link className="d-flex align-items-center justify-content-center flex-column">
                   <FontAwesomeIcon
                     icon={faUser}
                     style={{ color: "white", fontSize: "20px" }}
@@ -72,19 +77,3 @@ const NavigationBar = () => {
   );
 };
 export default NavigationBar;
-
-const SearchBar = () => {
-  return (
-    <Container>
-      <Form className="d-flex w-100" onSubmit={(e) => e.preventDefault()}>
-        <Form.Control
-          type="search"
-          placeholder="Search"
-          className="mx-0"
-          aria-label="Search"
-        />
-      </Form>
-    </Container>
-  );
-};
-// export default SearchBar

@@ -2,3 +2,6 @@
   background-color: rgb(44, 63, 72);
   color: white;
 }
+.container.home {
+  padding-bottom: 77px;
+}

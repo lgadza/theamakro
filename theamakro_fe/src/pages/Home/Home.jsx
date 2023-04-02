@@ -3,7 +3,7 @@ import ProductCard from "../../components/ProductCard";
 import "../../style/Home.css";
 const Home = () => {
   return (
-    <Container>
+    <Container className="mt-5 home">
       <Row>
         <Col className="my-2" xs={12} sm={6}>
           <ProductCard />
