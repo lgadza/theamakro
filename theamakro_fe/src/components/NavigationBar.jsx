@@ -1,5 +1,6 @@
 import { Container, Form, Nav, Navbar, Row } from "react-bootstrap";
 import "font-awesome/css/font-awesome.min.css";
+import { Link } from "react-router-dom";
 import {
   faHouse,
   faSearch,
@@ -19,49 +20,49 @@ const NavigationBar = () => {
           <Nav>
             <ul className="d-flex align-items-center my-0 py-2 justify-content-between px-4">
               <li className="d-flex align-items-center justify-content-center flex-column">
-                <Nav.Link>
+                <Link to="/home">
                   <FontAwesomeIcon
                     icon={faHouse}
                     style={{ color: "white", fontSize: "20px" }}
                   />
                   <small>Home</small>
-                </Nav.Link>
+                </Link>
               </li>
               <li className="d-flex align-items-center justify-content-center flex-column">
-                <Nav.Link>
+                <Link>
                   <FontAwesomeIcon
                     icon={faSearch}
                     style={{ color: "white", fontSize: "20px" }}
                   />
                   <small>Search</small>
-                </Nav.Link>
+                </Link>
               </li>
               <li className="d-flex align-items-center justify-content-center flex-column">
-                <Nav.Link>
+                <Link>
                   <FontAwesomeIcon
                     icon={faEnvelope}
                     style={{ color: "white", fontSize: "20px" }}
                   />
                   <small>Messages</small>
-                </Nav.Link>
+                </Link>
               </li>
               <li className="d-flex align-items-center justify-content-center flex-column">
-                <Nav.Link>
+                <Link>
                   <FontAwesomeIcon
                     icon={faCirclePlus}
                     style={{ color: "white", fontSize: "20px" }}
                   />
                   <small>Sell</small>
-                </Nav.Link>
+                </Link>
               </li>
               <li className="d-flex align-items-center justify-content-center flex-column">
-                <Nav.Link>
+                <Link>
                   <FontAwesomeIcon
                     icon={faUser}
                     style={{ color: "white", fontSize: "20px" }}
                   />
                   <small>Profile</small>
-                </Nav.Link>
+                </Link>
               </li>
             </ul>
           </Nav>
