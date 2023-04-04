@@ -9,6 +9,7 @@ body {
   text-align: center;
   background-color: rgb(32, 44, 51);
   min-height: 100vh;
+  color: white;
 }
 .text-red {
   color: rgb(243, 100, 100);

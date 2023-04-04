@@ -14,7 +14,7 @@ function App() {
         <SearchBar />
 
         <Routes>
-          <Route path="/home" element={<Home />} />
+          <Route path="/" element={<Home />} />
           <Route path="/category" element={<Category />} />
         </Routes>
       </BrowserRouter>

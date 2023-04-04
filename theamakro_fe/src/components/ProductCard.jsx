@@ -4,7 +4,7 @@ import ProductImg from "./ProductImg";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faHeart } from "@fortawesome/free-solid-svg-icons";
 
-const ProductCard = () => {
+const ProductCard = ({ width, height }) => {
   return (
     <Card className="product-card">
       <Card.Header className="d-flex align-items-center">
@@ -15,26 +15,25 @@ const ProductCard = () => {
           alt={"avatar"}
           className="mr-3"
         />
-        <div className="ml-2">
-          <small>lgadza</small>
-        </div>
+
+        <small className="mx-2">lgadza</small>
       </Card.Header>
       <Card.Body className="w-100 p-0 m-0">
         <ProductImg
-          width={100}
-          height={20}
+          width={width}
+          height={height}
           alt="product_img"
           src="https://expertreviews.b-cdn.net/sites/expertreviews/files/2023/03/best_android_smartphone_uk_2023_phones.jpg"
         />
-        <Card.Text className="p-3">
+        <Card.Text className="p-2">
           <div className="d-flex justify-content-between">
             <span>PLN25.00</span>
             <span>
               <FontAwesomeIcon
                 icon={faHeart}
-                style={{ color: "white", fontSize: "15px" }}
+                style={{ color: "white", fontSize: "13px" }}
               />
-              <span className="pl-5">100</span>
+              <small className="mx-1">100</small>
             </span>
           </div>
           <div className="d-flex flex-column text-start">

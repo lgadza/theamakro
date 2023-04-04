@@ -20,7 +20,7 @@ const NavigationBar = () => {
             <ul className="d-flex w-100 align-items-center my-0 py-2 justify-content-between px-4">
               <li className="d-flex align-items-center justify-content-center flex-column">
                 <Link
-                  to="/home"
+                  to="/"
                   className="d-flex align-items-center justify-content-center flex-column"
                 >
                   <FontAwesomeIcon
