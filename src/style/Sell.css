@@ -1,0 +1,30 @@
+.item-details input,
+.item-details input:active,
+.item-details input:focus {
+  background-color: rgb(42, 57, 66, 0) !important;
+  border: none;
+  outline: none;
+  box-shadow: none !important;
+  color: white;
+}
+.item-details input {
+  border-bottom: 2px solid rgb(44, 63, 72) !important;
+}
+.item-details textarea,
+.item-details textarea:active {
+  background-color: rgb(42, 57, 66, 0) !important;
+  border: none;
+  outline: none;
+  box-shadow: none !important;
+  color: white !important;
+  border-bottom: 2px solid rgb(44, 63, 72) !important;
+}
+/* .item-details textarea:focus {
+  background-color: rgb(32, 44, 51) !important;
+} */
+.background {
+  background-color: rgb(44, 63, 72) !important;
+}
+small.text-success {
+  color: rgb(26, 124, 80) !important;
+}

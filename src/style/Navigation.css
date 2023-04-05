@@ -1,0 +1,30 @@
+.nav ul li {
+  list-style: none;
+}
+
+div .nav {
+  padding: 0;
+}
+div .nav-container.container {
+  background-color: rgb(32, 44, 51);
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border-top: 1px solid white;
+  z-index: 3;
+}
+div .nav-container.container small {
+  color: white;
+}
+.search-container.container form input {
+  background-color: rgb(44, 63, 72);
+  color: white;
+}
+.search-container {
+  position: fixed !important;
+  top: 10px;
+  left: 0;
+  right: 0;
+  z-index: 3;
+}

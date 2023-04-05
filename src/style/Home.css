@@ -1,0 +1,21 @@
+.product-card.card {
+  background-color: rgb(44, 63, 72);
+  color: white;
+}
+.container.home {
+  padding-bottom: 77px;
+}
+.btn.btn-outline-primary {
+  border-radius: 20px !important;
+}
+div.slide-content {
+  width: 100vw;
+  overflow-x: scroll;
+  /* background-color: rgb(44, 63, 72); */
+}
+/* div.slide-content .brand-container {
+  background-color: aqua;
+} */
+.product-card {
+  object-fit: cover !important;
+}
