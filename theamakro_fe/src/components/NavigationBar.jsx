@@ -52,7 +52,10 @@ const NavigationBar = () => {
                 </Link>
               </li>
               <li className="d-flex align-items-center justify-content-center flex-column">
-                <Link className="d-flex align-items-center justify-content-center flex-column">
+                <Link
+                  to="/sell"
+                  className="d-flex align-items-center justify-content-center flex-column"
+                >
                   <FontAwesomeIcon
                     icon={faCirclePlus}
                     style={{ color: "white", fontSize: "20px" }}

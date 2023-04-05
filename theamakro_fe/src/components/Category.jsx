@@ -164,7 +164,7 @@ export default Category;
 
 const WomanCategory = () => {
   return (
-    <Container className="px-0">
+    <Container className="px-0 category">
       <hr className="my-0 py-0 bg-white mt-3" />
       <div className="d-flex justify-content-between align-items-center py-3">
         <span className="d-flex bd-highlight">
