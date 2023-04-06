@@ -29,6 +29,25 @@ const Category = () => {
       {category && (
         <Container className="px-0 category">
           <hr className="my-0 py-0 bg-white mt-3" />
+          <div className="d-flex justify-content-between align-items-center py-3">
+            <span className="d-flex bd-highlight">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="20"
+                height="20"
+                viewBox="0 0 20 20"
+                className="bd-highlight mx-3"
+              >
+                <path
+                  fill="currentColor"
+                  d="M12 16c1.1 0 2 .9 2 2s-.9 2-2 2s-2-.9-2-2s.9-2 2-2m0-6c1.1 0 2 .9 2 2s-.9 2-2 2s-2-.9-2-2s.9-2 2-2m0-6c1.1 0 2 .9 2 2s-.9 2-2 2s-2-.9-2-2s.9-2 2-2M6 16c1.1 0 2 .9 2 2s-.9 2-2 2s-2-.9-2-2s.9-2 2-2m0-6c1.1 0 2 .9 2 2s-.9 2-2 2s-2-.9-2-2s.9-2 2-2m0-6c1.1 0 2 .9 2 2s-.9 2-2 2s-2-.9-2-2s.9-2 2-2m12 12c1.1 0 2 .9 2 2s-.9 2-2 2s-2-.9-2-2s.9-2 2-2m0-6c1.1 0 2 .9 2 2s-.9 2-2 2s-2-.9-2-2s.9-2 2-2m0-6c1.1 0 2 .9 2 2s-.9 2-2 2s-2-.9-2-2s.9-2 2-2Z"
+                />
+              </svg>
+
+              <small className="text-light bd-highlight">All</small>
+            </span>
+          </div>
+          <hr className="my-0 py-0 bg-white" />
           <div
             role="button"
             onClick={() => {

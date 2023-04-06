@@ -6,6 +6,7 @@ import { BrowserRouter, Routes, Route, useLocation } from "react-router-dom";
 import Home from "./pages/Home/Home";
 import SearchBar from "./components/SearchBar";
 import Sell from "./pages/Home/Sell/Sell";
+import ProfilePage from "./pages/Home/Profile/ProfilePage";
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="/sell" element={<Sell />} />
           <Route path="/category" element={<Category />} />
+          <Route path="/profile" element={<ProfilePage />} />
         </Routes>
       </BrowserRouter>
     </div>
