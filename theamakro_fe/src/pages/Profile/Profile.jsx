@@ -24,12 +24,17 @@ const Profile = () => {
       <h6 className="text-start my-3">Profile</h6>
       <hr className="my-0 py-0 bg-white" />
       <div className="d-flex my-2">
-        <Avatar width={40} height={40} alt={"profile"} />
+        <Avatar
+          width={40}
+          height={40}
+          alt={"profile"}
+          src={"https://img.freepik.com/darmowe-ikony/awatara_318-158392.jpg"}
+        />
         <span className="d-flex flex-column text-start mx-2">
           <small>
             <strong>lgadza</strong>
           </small>
-          <span>View my profile</span>
+          <small>View my profile</small>
         </span>
       </div>
       <hr className="my-0 py-0 bg-white" />

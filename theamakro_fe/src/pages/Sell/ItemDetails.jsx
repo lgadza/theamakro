@@ -1,7 +1,7 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { Container, Form, Row, Spinner } from "react-bootstrap";
+import { Button, Container, Form, Row, Spinner } from "react-bootstrap";
 import { faAngleRight } from "@fortawesome/free-solid-svg-icons";
-import Button1 from "../../../components/Button";
+import Button1 from "../../components/Button";
 import { useState } from "react";
 
 const ItemDetails = () => {
@@ -163,7 +163,9 @@ const ItemDetails = () => {
             What do you think of upload process?
           </small>
         </span>
-        <Button1 btn_id="Feedback"></Button1>
+        <Button variant="outline-primary" className="px-3 my-1">
+          <small>Feedback</small>
+        </Button>
       </div>
       {/* <hr className="my-0 py-0 bg-white" /> */}
     </Container>

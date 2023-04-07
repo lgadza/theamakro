@@ -5,7 +5,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import { BrowserRouter, Routes, Route, useLocation } from "react-router-dom";
 import Home from "./pages/Home/Home.jsx";
 import SearchBar from "./components/SearchBar";
-import Sell from "./pages/Home/Sell/Sell";
+import Sell from "./pages/Sell/Sell.jsx";
 import ProfilePage from "./pages/Profile/ProfilePage";
 import ProductPreview from "./pages/Home/ProductPreview";
 
