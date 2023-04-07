@@ -11,7 +11,7 @@ import { Link } from "react-router-dom";
 
 const ProductPreview = () => {
   return (
-    <Container fluid className="px-0 my-0 mx-0">
+    <Container className="px-0 mx-0">
       <img
         className="item-preview-img"
         src="https://cdn.britannica.com/18/137318-050-29F7072E/rooster-Rhode-Island-Red-roosters-chicken-domestication.jpg"
@@ -69,8 +69,9 @@ const ProductPreview = () => {
           <small>Make an offer</small>
         </Button>
       </Row>
-      <Row className="mx-2">
-        <div className="d-flex justify-items-around">
+      <Row className="my-3 mx-3">
+        <hr className="my-0 py-0 bg-white" />
+        <div className="d-flex justify-content-around">
           <Link className="my-2">
             <FontAwesomeIcon
               className="bd-highlight mx-1"
@@ -88,6 +89,39 @@ const ProductPreview = () => {
             <small className="text-light">Share</small>
           </Link>
         </div>
+        <hr className="my-0 py-0 bg-white" />
+      </Row>
+      <Row className="mx-2">
+        <span className="text-start">
+          <strong>Item Description</strong>
+        </span>
+        <p className="text-start">
+          <small>
+            Chickens are gregarious birds and live together in flocks. They have
+            a communal approach to the incubation of eggs and raising of young.
+          </small>
+          <br />
+          <Link className="">
+            <small>more</small>
+          </Link>
+        </p>
+      </Row>
+      <hr className="my-0 py-0 bg-white" />
+      <Row className="px-2">
+        <span className="text-start py-1 d-flex justify-content-between">
+          <strong>Postage</strong>
+          <small>From 5 USD</small>
+        </span>
+        <p className="text-start bg">
+          <small>
+            Chickens are gregarious birds and live together in flocks. They have
+            a communal approach to the incubation of eggs and raising of young.
+          </small>
+          <br />
+          <Link className="">
+            <small>more</small>
+          </Link>
+        </p>
       </Row>
     </Container>
   );
