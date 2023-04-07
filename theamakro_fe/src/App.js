@@ -3,7 +3,7 @@ import Category from "./components/Category";
 import NavigationBar from "./components/NavigationBar";
 import "bootstrap/dist/css/bootstrap.min.css";
 import { BrowserRouter, Routes, Route, useLocation } from "react-router-dom";
-import Home from "./pages/Home/Home";
+import Home from "./pages/Home/Home/Home.jsx";
 import SearchBar from "./components/SearchBar";
 import Sell from "./pages/Home/Sell/Sell";
 import ProfilePage from "./pages/Home/Profile/ProfilePage";
