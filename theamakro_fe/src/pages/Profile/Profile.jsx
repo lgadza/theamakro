@@ -5,9 +5,13 @@ import {
   faBagShopping,
   faCircleExclamation,
   faCircleQuestion,
+  faFaceSmile,
+  faFileSignature,
   faGear,
   faHeart,
+  faPercent,
   faScaleBalanced,
+  faShield,
   faSliders,
 } from "@fortawesome/free-solid-svg-icons";
 import Button1 from "../../components/Button";
@@ -79,6 +83,25 @@ const Profile = () => {
           style={{ color: "white", fontSize: "18px" }}
         />
       </div>
+      <hr className="my-0 py-0 bg-white" />
+      <hr className="my-0 py-0 bg-white" />
+      <div className="d-flex justify-content-between align-items-center py-3">
+        <span className="d-flex bd-highlight">
+          <FontAwesomeIcon
+            className="bd-highlight"
+            icon={faPercent}
+            style={{ color: "white", fontSize: "20px" }}
+          />
+          <small className="text-light bd-highlight mx-3">Make discounts</small>
+        </span>
+        <FontAwesomeIcon
+          className="bd-highlight"
+          icon={faAngleRight}
+          style={{ color: "white", fontSize: "18px" }}
+        />
+      </div>
+      <hr className="my-0 py-0 bg-white" />
+      <hr className="my-0 py-0 bg-white" />
       <div className="d-flex justify-content-between align-items-center py-3">
         <span className="d-flex bd-highlight">
           <FontAwesomeIcon
@@ -94,6 +117,8 @@ const Profile = () => {
           style={{ color: "white", fontSize: "18px" }}
         />
       </div>
+      <hr className="my-0 py-0 bg-white" />
+      <hr className="my-0 py-0 bg-white" />
       <div className="d-flex justify-content-between align-items-center py-3">
         <span className="d-flex bd-highlight">
           <FontAwesomeIcon
@@ -111,6 +136,8 @@ const Profile = () => {
           style={{ color: "white", fontSize: "18px" }}
         />
       </div>
+      <hr className="my-0 py-0 bg-white" />
+      <hr className="my-0 py-0 bg-white" />
       <div className="d-flex justify-content-between align-items-center py-3">
         <span className="d-flex bd-highlight">
           <FontAwesomeIcon
@@ -126,6 +153,8 @@ const Profile = () => {
           style={{ color: "white", fontSize: "18px" }}
         />
       </div>
+      <hr className="my-0 py-0 bg-white" />
+      <hr className="my-0 py-0 bg-white" />
       <div className="d-flex justify-content-between align-items-center py-3">
         <span className="d-flex bd-highlight">
           <FontAwesomeIcon
@@ -143,19 +172,63 @@ const Profile = () => {
           style={{ color: "white", fontSize: "18px" }}
         />
       </div>
+      <hr className="my-0 py-0 bg-white" />
+      <hr className="my-0 py-0 bg-white" />
+      <div className="d-flex justify-content-between align-items-center py-3">
+        <span className="d-flex bd-highlight">
+          <FontAwesomeIcon
+            className="bd-highlight"
+            icon={faFileSignature}
+            style={{ color: "white", fontSize: "20px" }}
+          />
+          <small className="text-light bd-highlight mx-3">
+            Terms & Conditions
+          </small>
+        </span>
+        <FontAwesomeIcon
+          className="bd-highlight"
+          icon={faAngleRight}
+          style={{ color: "white", fontSize: "18px" }}
+        />
+      </div>
+      <hr className="my-0 py-0 bg-white" />
+      <hr className="my-0 py-0 bg-white" />
+      <div className="d-flex justify-content-between align-items-center py-3">
+        <span className="d-flex bd-highlight">
+          <FontAwesomeIcon
+            className="bd-highlight"
+            icon={faShield}
+            style={{ color: "white", fontSize: "20px" }}
+          />
+          <small className="text-light bd-highlight mx-3">Privacy Policy</small>
+        </span>
+        <FontAwesomeIcon
+          className="bd-highlight"
+          icon={faAngleRight}
+          style={{ color: "white", fontSize: "18px" }}
+        />
+      </div>
+      <hr className="my-0 py-0 bg-white" />
+      <hr className="my-0 py-0 bg-white" />
+      <div className="d-flex justify-content-between align-items-center py-3">
+        <span className="d-flex bd-highlight">
+          <FontAwesomeIcon
+            className="bd-highlight"
+            icon={faFaceSmile}
+            style={{ color: "white", fontSize: "20px" }}
+          />
+          <small className="text-light bd-highlight mx-3">Your feedback</small>
+        </span>
+        <FontAwesomeIcon
+          className="bd-highlight"
+          icon={faAngleRight}
+          style={{ color: "white", fontSize: "18px" }}
+        />
+      </div>
 
       <hr className="my-0 py-0 bg-white" />
       <hr className="my-0 py-0 bg-white" />
       {/* </Row> */}
-      <div className="d-flex justify-content-between align-items-center mt-5 py-3">
-        <span className="d-flex bd-highlight">
-          <small className="text-light bd-highlight">
-            What do you think of Thea-makro?
-          </small>
-        </span>
-        <Button1 btn_id="Feedback"></Button1>
-      </div>
-      {/* <hr className="my-0 py-0 bg-white" /> */}
     </Container>
   );
 };

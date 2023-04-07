@@ -19,3 +19,8 @@ div.slide-content {
 .product-card {
   object-fit: cover !important;
 }
+.item-preview-img {
+  width: 100vw;
+  height: 50vh;
+  object-fit: cover;
+}
