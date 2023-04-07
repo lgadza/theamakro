@@ -1,8 +1,8 @@
 import { Col, Container, Row } from "react-bootstrap";
-import ProductCard from "../../../components/ProductCard";
+import ProductCard from "../../components/ProductCard";
 import "../../style/Home.css";
-import Button1 from "../../../components/Button";
-import Avatar from "../../../components/Avatar";
+import Button1 from "../../components/Button";
+import Avatar from "../../components/Avatar";
 
 const Home = () => {
   return (

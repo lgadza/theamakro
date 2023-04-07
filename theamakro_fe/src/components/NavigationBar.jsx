@@ -64,7 +64,10 @@ const NavigationBar = () => {
                 </Link>
               </li>
               <li className="d-flex align-items-center justify-content-center flex-column">
-                <Link className="d-flex align-items-center justify-content-center flex-column">
+                <Link
+                  to={"profile"}
+                  className="d-flex align-items-center justify-content-center flex-column"
+                >
                   <FontAwesomeIcon
                     icon={faUser}
                     style={{ color: "white", fontSize: "20px" }}
