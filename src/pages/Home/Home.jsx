@@ -3,6 +3,7 @@ import ProductCard from "../../components/ProductCard";
 import "../../style/Home.css";
 import Button1 from "../../components/Button";
 import Avatar from "../../components/Avatar";
+import { Link } from "react-router-dom";
 
 const Home = () => {
   return (
@@ -68,7 +69,9 @@ const Home = () => {
         {[...Array(20)].map((item, index) => {
           return (
             <Col className="my-2" xs={6} sm={6}>
-              <ProductCard width="100%" height="10rem" />
+              <Link to="item_preview">
+                <ProductCard width="100%" height="10rem" />
+              </Link>
             </Col>
           );
         })}

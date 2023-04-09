@@ -8,8 +8,11 @@ body {
 .App {
   text-align: center;
   background-color: rgb(32, 44, 51);
+  /* width: 100vw !important; */
   min-height: 100vh;
+  overflow-y: scroll;
   color: white;
+  padding-bottom: 70px;
 }
 .text-red {
   color: rgb(243, 100, 100);
@@ -36,7 +39,9 @@ a {
 .App-link {
   color: #61dafb;
 }
-
+.bg {
+  background-color: rgb(44, 63, 72) !important;
+}
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);
