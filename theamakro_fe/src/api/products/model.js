@@ -8,8 +8,14 @@ const productSchema = new Schema(
     description: { type: String, required: true },
     brand: { type: String, required: true },
     category: { type: String, required: true },
-    imageUrl: { type: String, required: true },
+
+    imageUrls: {
+      type: [String],
+      validate: [arrayLimit, "Images exceeds the limit of 10"],
+      required: true,
+    },
     price: { type: Number, required: true },
+    condition: { type: String, required: true },
     reviews: [ReviewsModel],
   },
   {
@@ -29,4 +35,7 @@ productSchema.static("findProductsWithReviews", async function (query) {
 
   return { total, products };
 });
+function arrayLimit(val) {
+  return val.length <= 10;
+}
 export default model("product", productSchema);
