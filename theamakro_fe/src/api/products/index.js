@@ -255,74 +255,74 @@ productRouter.delete(
     }
   }
 );
-productRouter.post("/:productId/reviews", async (req, res, next) => {
-  try {
-    const review = req.body;
-    const product = await ProductModel.findById(req.params.productId);
-    if (!product)
-      return next(
-        createHttpError(
-          404,
-          `Product with id ${req.params.productId} not found`
-        )
-      );
-    // const like = await ReviewsModel.findById(reviewId);
-    // if (!like)
-    //   return next(
-    //     createHttpError(404, `Review with id ${reviewId} not found!`)
-    //   );
-    const isLiked = await LikesModel.findOne({
-      product: req.params.productId,
-      status: "Like",
-      "likes.reviewId": reviewId,
-    });
-    if (isLiked) {
-      // const quantity = -1;
-      // await LikesModel.findOneAndUpdate(
-      //   {
-      //     product: req.params.productId,
-      //     "likes.reviewId": reviewId,
-      //   },
-      //   { $inc: { "likes.$.quantity": quantity } }
-      // );
-      const updatedLike = await LikesModel.findOneAndUpdate(
-        {
-          product: req.params.productId,
-          "likes.reviewId": reviewId,
-        },
-        { $pull: { likes: { _id: req.params.reviewId } } },
-        { new: true }
-      );
-      if (updatedLike) {
-        res.send(updatedLike);
-      } else {
-        next(
-          createHttpError(
-            404,
-            `Product with id ${req.params.productId} not found!`
-          )
-        );
-      }
-    } else {
-      const modifiedLike = await LikesModel.findOneAndUpdate(
-        {
-          product: req.params.productId,
-          status: "Like",
-        },
-        {
-          $push: { likes: { reviewId: reviewId }, quantity },
-        },
-        {
-          new: true,
-          runValidators: true,
-          upsert: true,
-        }
-      );
-      res.send(modifiedLike);
-    }
-  } catch (error) {
-    next(error);
-  }
-});
+// productRouter.post("/:productId/reviews", async (req, res, next) => {
+//   try {
+//     const review = req.body;
+//     const product = await ProductModel.findById(req.params.productId);
+//     if (!product)
+//       return next(
+//         createHttpError(
+//           404,
+//           `Product with id ${req.params.productId} not found`
+//         )
+//       );
+//     // const like = await ReviewsModel.findById(reviewId);
+//     // if (!like)
+//     //   return next(
+//     //     createHttpError(404, `Review with id ${reviewId} not found!`)
+//     //   );
+//     const isLiked = await LikesModel.findOne({
+//       product: req.params.productId,
+//       status: "Like",
+//       "likes.reviewId": reviewId,
+//     });
+//     if (isLiked) {
+//       const quantity = -1;
+//       await LikesModel.findOneAndUpdate(
+//         {
+//           product: req.params.productId,
+//           "likes.reviewId": reviewId,
+//         },
+//         { $inc: { "likes.$.quantity": quantity } }
+//       );
+//       const updatedLike = await LikesModel.findOneAndUpdate(
+//         {
+//           product: req.params.productId,
+//           "likes.reviewId": reviewId,
+//         },
+//         { $pull: { likes: { _id: req.params.reviewId } } },
+//         { new: true }
+//       );
+//       if (updatedLike) {
+//         res.send(updatedLike);
+//       } else {
+//         next(
+//           createHttpError(
+//             404,
+//             `Product with id ${req.params.productId} not found!`
+//           )
+//         );
+//       }
+//     } else {
+//       const modifiedLike = await LikesModel.findOneAndUpdate(
+//         {
+//           product: req.params.productId,
+//           status: "Like",
+//         },
+//         {
+//           $push: { likes: { reviewId: reviewId }, quantity },
+//         },
+//         {
+//           new: true,
+//           runValidators: true,
+//           upsert: true,
+//         }
+//       );
+//       res.send(modifiedLike);
+//     }
+//   } catch (error) {
+//     next(error);
+//   }
+// });
 
 export default productRouter;

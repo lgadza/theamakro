@@ -5,6 +5,7 @@ import mongoose from "mongoose";
 // import blogPostRouter from "./api/blogPost/index.js";
 import productRouter from "./api/products/index.js";
 import usersRouter from "./api/testProject/index.js";
+import createHttpError from "http-errors";
 import {
   badRequestHandler,
   notFoundHandler,
@@ -14,7 +15,7 @@ import {
 const server = express();
 const port = process.env.PORT || 3001;
 
-// ******************************* MIDDLEWARES ****************************************
+// ******************************* MIDDLEWARES ***************************************
 server.use(express.json());
 const whitelist = [process.env.FE_DEV_URL];
 
