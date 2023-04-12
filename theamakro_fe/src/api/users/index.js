@@ -2,13 +2,13 @@ import express from "express";
 import createHttpError from "http-errors";
 import q2m from "query-to-mongo";
 import { checkUserSchema, triggerBadRequest } from "./validator.js";
-import { adminOnlyMiddleware } from "../../lib/auth/adminOnly.js";
-import { JWTAuthMiddleware } from "../../lib/auth/jwtAuth.js";
-import { createAccessToken } from "../../lib/auth/tools.js";
-import { createLogoutToken } from "../../lib/auth/tools.js";
+import { adminOnlyMiddleware } from "../lib/auth/adminOnly.js";
+import { JWTAuthMiddleware } from "../lib/auth/jwtAuth.js";
+import { createAccessToken } from "../lib/auth/tools.js";
+import { createLogoutToken } from "../lib/auth/tools.js";
 import UsersModel from "./model.js";
 import passport from "passport";
-import { sendRegistrationEmail } from "../../lib/email-tools.js";
+import { sendRegistrationEmail } from "../lib/email-tools.js";
 import sgMail from "@sendgrid/mail";
 
 sgMail.setApiKey(process.env.SENDGRID_KEY);

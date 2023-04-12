@@ -1,23 +1,43 @@
 import express from "express";
+import { join } from "path";
+
+// import chatsRouter from "./api/socket io/index.js";
+import productRouter from "./api/products/index.js";
+
 import listEndpoints from "express-list-endpoints";
+import usersRouter from "./api/users/index.js";
 import cors from "cors";
 import mongoose from "mongoose";
-// import blogPostRouter from "./api/blogPost/index.js";
-import productRouter from "./api/products/index.js";
-import usersRouter from "./api/testProject/index.js";
+import googleStrategy from "./api/lib/auth/google.js";
+import passport from "passport";
+import { createServer } from "http";
+import { Server } from "socket.io";
 import createHttpError from "http-errors";
+// import swagger from "swagger-ui-express";
+// import yaml from "yamljs";
+import { newConnectionHandler } from "./api/socket io/index.js";
 import {
-  badRequestHandler,
+  unauthorizedHandler,
   notFoundHandler,
+  badRequestHandler,
   genericErrorHandler,
 } from "./errorHandler.js";
+import filesRouter from "./api/files/index.js";
+// import commentsRouter from "./api/reservations/comments/index.js";
 
-const server = express();
+const expressServer = express();
+
 const port = process.env.PORT || 3001;
 
-// ******************************* MIDDLEWARES ***************************************
-server.use(express.json());
-const whitelist = [process.env.FE_DEV_URL];
+const httpServer = createServer(expressServer);
+export const io = new Server(httpServer);
+io.on("connection", newConnectionHandler);
+passport.use("google", googleStrategy);
+const publicFolderPath = join(process.cwd(), "./public");
+
+// ***************************** MIDDLEWARES ***************************
+const whitelist = [process.env.FE_DEV_URL, process.env.FE_PROD_URL];
+// const yamlFile = yaml.load(join(process.cwd(), "./src/docs/apiDocs.yml"));
 
 const corsOpts = {
   origin: (origin, corsNext) => {
@@ -31,25 +51,34 @@ const corsOpts = {
     }
   },
 };
+expressServer.use(express.json());
+expressServer.use(cors());
+expressServer.use(passport.initialize());
+expressServer.use(cors(corsOpts));
+expressServer.use(express.static(publicFolderPath));
+// ************************************ SOCKET.IO ********************************
 
-server.use(cors(corsOpts));
+// ****************************** ENDPOINTS ****************************
 
-// ******************************** ENDPOINTS *****************************************
-// server.use("/blogPosts", blogPostRouter);
-server.use("/products", productRouter);
-server.use("/users", usersRouter);
+expressServer.use("/users", usersRouter);
+expressServer.use("/files", filesRouter);
+expressServer.use("/products", productRouter);
 
-// ***************************** ERROR HANDLERS ***************************************
-server.use(badRequestHandler);
-server.use(notFoundHandler);
-server.use(genericErrorHandler);
+// expressServer.use("/reservationComments", commentsRouter);
+// *************************** ERROR HANDLERS **************************
+expressServer.use(badRequestHandler);
+expressServer.use(notFoundHandler);
+expressServer.use(unauthorizedHandler);
+expressServer.use(genericErrorHandler);
+// expressServer.use("/docs", swagger.serve, swagger.setup(yamlFile));
 
+mongoose.set("strictQuery", false);
 mongoose.connect(process.env.MONGO_URL);
 
 mongoose.connection.on("connected", () => {
   console.log("Successfully connected to Mongo!");
-  server.listen(port, () => {
-    console.table(listEndpoints(server));
-    console.log(`Server is running on port ${port}`);
+  httpServer.listen(port, () => {
+    console.table(listEndpoints(expressServer));
+    console.log(`ExpressServer is running on port ${port}`);
   });
 });

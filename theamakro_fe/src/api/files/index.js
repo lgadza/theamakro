@@ -3,7 +3,7 @@ import multer from "multer";
 import { extname } from "path";
 import { v2 as cloudinary } from "cloudinary";
 import { CloudinaryStorage } from "multer-storage-cloudinary";
-import { saveUsersAvatars } from "../../lib/fs-tools.js";
+import { saveUsersAvatars } from "../lib/fs-tools.js";
 import UsersModel from "../users/model.js";
 import ProjectImgModel from "./model.js";
 import createHttpError from "http-errors";
