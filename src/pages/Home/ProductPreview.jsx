@@ -4,6 +4,8 @@ import Button1 from "../../components/Button";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faHeart,
+  faLocation,
+  faLocationDot,
   faLock,
   faMessage,
   faMoneyBill,
@@ -42,6 +44,14 @@ const ProductPreview = () => {
             <small>Ask seller</small>
           </Button>
         </div>
+        <div className="text-start">
+            <FontAwesomeIcon
+              className="bd-highlight text-primary mx-1 my-0 py-0"
+              icon={faLocationDot}
+              style={{  fontSize: "15px" }}
+            />
+            <small className="text-primary">Bulawayo, Zimbabwe</small>
+          </div>
       </Row>
       <hr className="my-0 py-0 bg-white" />
 
@@ -77,24 +87,27 @@ const ProductPreview = () => {
         <hr className="my-0 py-0 bg-white" />
         <div className="d-flex justify-content-around">
           
-          <Button variant="outline-primary" className="my-2 px-4 d-flex align-items-center justify-content-center">
+          <Button variant="outline-primary" className="my-2 py-0 px-4 d-flex align-items-center justify-content-center">
           <Link>
             <FontAwesomeIcon
-              className="bd-highlight mx-1"
+              className="bd-highlight text-primary mx-1 my-0 py-0"
               icon={faHeart}
-              style={{ color: "white", fontSize: "15px" }}
+              style={{  fontSize: "15px" }}
             />
-            <small className="text-light">Favorite</small>
+            <small className="text-primary">Favorite</small>
           </Link>
         </Button>
-          <Link className="my-2">
+          <Button variant="outline-primary" className="my-2 py-0 px-4 d-flex align-items-center justify-content-center">
+          <Link>
             <FontAwesomeIcon
-              className="bd-highlight mx-1"
+              className="bd-highlight text-primary mx-1 my-0 py-0"
               icon={faShareNodes}
-              style={{ color: "white", fontSize: "18px" }}
+              style={{  fontSize: "18px" }}
             />
-            <small className="text-light">Share</small>
+            <small className="text-primary">Share</small>
           </Link>
+        </Button>
+         
         </div>
         <hr className="my-0 py-0 bg-white" />
       </Row>
