@@ -76,14 +76,17 @@ const ProductPreview = () => {
       <Row className="my-3 mx-3">
         <hr className="my-0 py-0 bg-white" />
         <div className="d-flex justify-content-around">
-          <Link className="my-2">
+          
+          <Button variant="outline-primary" className="my-2 px-4 d-flex align-items-center justify-content-center">
+          <Link>
             <FontAwesomeIcon
               className="bd-highlight mx-1"
               icon={faHeart}
-              style={{ color: "white", fontSize: "18px" }}
+              style={{ color: "white", fontSize: "15px" }}
             />
             <small className="text-light">Favorite</small>
           </Link>
+        </Button>
           <Link className="my-2">
             <FontAwesomeIcon
               className="bd-highlight mx-1"

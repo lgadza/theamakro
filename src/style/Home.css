@@ -27,3 +27,19 @@ div.slide-content {
 .underline-active {
   border-bottom: 2px solid white;
 }
+.footer{
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+.footer .navbar-nav{
+  background-color: transparent;
+}
+.footer .textColor{
+  color: black !important;
+
+}
+a small{
+  font-size: 0.9rem;
+}

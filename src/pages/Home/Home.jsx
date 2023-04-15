@@ -7,7 +7,7 @@ import { Link } from "react-router-dom";
 
 const Home = () => {
   return (
-    <Container className="mt-5 home">
+    <Container className="mt-5 home category">
       <Row className="mb-2">
         <small className="text-light pb-3">
           Sign in so we can tailor make your TheaMakro experience

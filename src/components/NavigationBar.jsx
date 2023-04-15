@@ -1,15 +1,15 @@
 // import { Container, Nav, Navbar, Row } from "react-bootstrap";
-// import "font-awesome/css/font-awesome.min.css";
-// import { Link } from "react-router-dom";
-// import {
-//   faHouse,
-//   faSearch,
-//   faUser,
-//   faEnvelope,
-//   faCirclePlus,
-// } from "@fortawesome/free-solid-svg-icons";
-// import "../style/Navigation.css";
-// import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import "font-awesome/css/font-awesome.min.css";
+import { Link } from "react-router-dom";
+import {
+  faHouse,
+  faSearch,
+  faUser,
+  faEnvelope,
+  faCirclePlus,
+} from "@fortawesome/free-solid-svg-icons";
+import "../style/Navigation.css";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 // const NavigationBar = () => {
 //   return (
 //     <Navbar>
@@ -18,10 +18,11 @@
 //           <Navbar.Toggle aria-controls="basic-navbar-nav" />
 //           <Nav className="p-0">
 //             <ul className="d-flex w-100 align-items-center my-0 py-2 justify-content-between px-4">
-//               <li className="d-flex align-items-center justify-content-center flex-column">
+//               <li className="d-flex align-items-center justify-content-start">
 //                 <Link
 //                   to="/"
-//                   className="d-flex align-items-center justify-content-center flex-column"
+//                   className="d-flex align-items-center justify-content-center"
+
 //                 >
 //                   <FontAwesomeIcon
 //                     icon={faHouse}
@@ -30,10 +31,11 @@
 //                   <small>Home</small>
 //                 </Link>
 //               </li>
-//               <li className="d-flex align-items-center justify-content-center flex-column">
+//               <li className="d-flex align-items-center justify-content-start">
 //                 <Link
 //                   to="category"
-//                   className="d-flex align-items-center justify-content-center flex-column"
+//                   className="d-flex align-items-center justify-content-center"
+
 //                 >
 //                   <FontAwesomeIcon
 //                     icon={faSearch}
@@ -42,8 +44,9 @@
 //                   <small>Search</small>
 //                 </Link>
 //               </li>
-//               <li className="d-flex align-items-center justify-content-center flex-column">
-//                 <Link className="d-flex align-items-center justify-content-center flex-column">
+//               <li className="d-flex align-items-center justify-content-start">
+//                 <Link className="d-flex align-items-center justify-content-center"
+
 //                   <FontAwesomeIcon
 //                     icon={faEnvelope}
 //                     style={{ color: "white", fontSize: "20px" }}
@@ -51,10 +54,11 @@
 //                   <small>Messages</small>
 //                 </Link>
 //               </li>
-//               <li className="d-flex align-items-center justify-content-center flex-column">
+//               <li className="d-flex align-items-center justify-content-start">
 //                 <Link
 //                   to="/sell"
-//                   className="d-flex align-items-center justify-content-center flex-column"
+//                   className="d-flex align-items-center justify-content-center"
+
 //                 >
 //                   <FontAwesomeIcon
 //                     icon={faCirclePlus}
@@ -63,10 +67,11 @@
 //                   <small>Sell</small>
 //                 </Link>
 //               </li>
-//               <li className="d-flex align-items-center justify-content-center flex-column">
+//               <li className="d-flex align-items-center justify-content-start">
 //                 <Link
 //                   to={"profile"}
-//                   className="d-flex align-items-center justify-content-center flex-column"
+//                   className="d-flex align-items-center justify-content-center"
+
 //                 >
 //                   <FontAwesomeIcon
 //                     icon={faUser}
@@ -86,36 +91,81 @@
 import React from "react";
 import "../style/Navigation.css";
 import logo from "../../src/img/TM logo.png"
+import Footer from "./Footer";
 
 
 const Menu = (props) => {
   return (
-    <div className={`menu-container ${props.showMenu}`}>
+    <div className={`menu-container ${props.showMenu} category`}>
       <div className="overlay" />
       <div className="menu-items">
-        <ul>
-          <li>
-            <a href="#welcome-section" onClick={props.toggleMenu}>
-              Home
-            </a>
-          </li>
-          <li>
-            <a href="#about" onClick={props.toggleMenu}>
-              About
-            </a>
-          </li>
-          <li>
-            <a href="#projects" onClick={props.toggleMenu}>
-              My work
-            </a>
-          </li>
-          <li>
-            <a href="#contact" onClick={props.toggleMenu}>
-              Contact Me
-            </a>
-          </li>
-        </ul>
-        {/* <SocialLinks /> */}
+       
+           <ul className="w-100 text-start my-0 py-2 px-4">
+             <li className="d-flex align-items-center justify-content-start">
+                 <Link
+                  to="/"
+                  className="d-flex align-items-center justify-content-start"
+                  onClick={props.toggleMenu}
+                >
+                  <FontAwesomeIcon
+                    icon={faHouse}
+                    style={{ color: "white", fontSize: "20px" }}
+                  />
+                  <small className="mx-2">Home</small>
+                </Link>
+              </li>
+              <li className="d-flex align-items-center justify-content-start">
+                <Link
+                  to="category"
+                  className="d-flex align-items-center justify-content-center"
+                  onClick={props.toggleMenu}
+                >
+                  <FontAwesomeIcon
+                    icon={faSearch}
+                    style={{ color: "white", fontSize: "20px" }}
+                  />
+                  <small className="mx-2">Search</small>
+                </Link>
+              </li>
+              <li className="d-flex align-items-center justify-content-start">
+                <Link className="d-flex align-items-center justify-content-center"
+                onClick={props.toggleMenu}>
+                  <FontAwesomeIcon
+                    icon={faEnvelope}
+                    style={{ color: "white", fontSize: "20px" }}
+                  />
+                  <small className="mx-2">Messages</small>
+                </Link>
+              </li>
+              <li className="d-flex align-items-center justify-content-start">
+                <Link
+                  to="/sell"
+                  className="d-flex align-items-center justify-content-center"
+                  onClick={props.toggleMenu}
+                >
+                  <FontAwesomeIcon
+                    icon={faCirclePlus}
+                    style={{ color: "white", fontSize: "20px" }}
+                  />
+                  <small className="mx-2">Sell</small>
+                </Link>
+              </li>
+              <li className="d-flex align-items-center justify-content-start">
+                <Link
+                  to={"profile"}
+                  className="d-flex align-items-center justify-content-center"
+                  onClick={props.toggleMenu}
+                >
+                  <FontAwesomeIcon
+                    icon={faUser}
+                    style={{ color: "white", fontSize: "20px" }}
+                  />
+                  <small className="mx-2">Profile</small>
+                </Link>
+              </li>
+      {/* <Footer/> */}
+            </ul>
+       
       </div>
     </div>
   );
@@ -137,7 +187,7 @@ const Nav = (props) => {
               props.showMenu === "active" ? "menu-button active" : "menu-button"
             }
           >
-            <span />
+            <span/>
           </a>
         </div>
       </nav>
@@ -165,10 +215,7 @@ class NavigationBar extends React.Component {
       <React.Fragment>
         <Menu toggleMenu={this.toggleMenu} showMenu={this.state.menuState} />
         <Nav toggleMenu={this.toggleMenu} showMenu={this.state.menuState} />
-        {/* <Header />
-        <About />
-        <Projects />
-        <Contact /> */}
+       
       </React.Fragment>
     );
   }

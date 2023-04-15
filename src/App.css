@@ -8,7 +8,7 @@ body {
 .App {
   text-align: center;
   background-color: rgb(32, 44, 51);
-  /* width: 100vw !important; */
+  width: 100vw !important;
   min-height: 100vh;
   overflow-y: scroll;
   color: white;
@@ -24,16 +24,6 @@ body {
 }
 a {
   text-decoration: none !important;
-}
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
 
 .App-link {
@@ -51,5 +41,5 @@ a {
   }
 }
 .category {
-  padding-top: 40px;
+  padding-top: 50px;
 }
