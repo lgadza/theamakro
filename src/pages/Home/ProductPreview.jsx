@@ -60,7 +60,7 @@ const ProductPreview = () => {
           <strong>Black Jean</strong>
         </span>
         <div className="d-flex justify-content-between">
-          <span>PLN25.00</span>
+          <span>USD25.00</span>
         </div>
         <div className="d-flex flex-column text-start">
           <small className="text-mute">Brand</small>
